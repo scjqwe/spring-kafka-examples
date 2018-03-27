@@ -39,6 +39,7 @@ public class ProducerConfig {
 		props.put(Config.LINGER_MS_CONFIG, linger);
 		props.put(Config.BUFFER_MEMORY_CONFIG, bufferMemory);
 		props.put(Config.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+		props.put(Config.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
 		props.put(Config.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
 		return props;
 	}

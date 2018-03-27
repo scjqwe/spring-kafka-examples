@@ -24,7 +24,7 @@ public class ProducerController {
 	@RequestMapping("/send")
 	public Object sendKafka(String message) {
 		try {
-			logger.info("kafka message: {}", message);
+			logger.info("send kafka message: {}", message);
 			kafkaTemplate.send(topicName, UUID.randomUUID().toString(), message);
 			return "success";
 		} catch (Exception e) {

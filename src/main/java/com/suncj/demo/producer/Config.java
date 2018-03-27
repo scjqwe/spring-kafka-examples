@@ -18,7 +18,7 @@ public class Config {
 
 	public static final String BUFFER_MEMORY_CONFIG = "session.timeout.ms";
 
-	public static final String KEY_SERIALIZER_CLASS_CONFIG = "key.deserializer";
+	public static final String KEY_SERIALIZER_CLASS_CONFIG = "key.serializer";
 
-	public static final String VALUE_SERIALIZER_CLASS_CONFIG = "value.deserializer";
+	public static final String VALUE_SERIALIZER_CLASS_CONFIG = "value.serializer";
 }
