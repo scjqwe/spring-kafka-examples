@@ -11,7 +11,6 @@ import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
-import org.springframework.kafka.listener.KafkaMessageListenerContainer;
 import org.springframework.kafka.listener.MessageListener;
 import org.springframework.kafka.listener.config.ContainerProperties;
 
@@ -54,18 +53,21 @@ public class ConsumerConfig {
 
 	/**
 	 * KafkaMessageListenerContainer： 从单个线程上的所有主题/分区接收所有消息
-	 */
-	@Bean
+	
+	@Bean(initMethod = "doStart")
 	public KafkaMessageListenerContainer<String, String> kafkaMessageListenerContainer() {
 		KafkaMessageListenerContainer<String, String> container = new KafkaMessageListenerContainer<>(consumerFactory(), containerProperties());
 		return container;
 	}
+	
+	*/
 
 	/**
 	 * ConcurrentMessageListenerContainer：
 	 * 委托给1个或多个KafkaMessageListenerContainer以提供多线程消费。
 	 * 通过container.setConcurrency(3)，来设置多个线程
 	 */
+	@Bean(initMethod = "doStart")
 	public ConcurrentMessageListenerContainer<String, String> concurrentMessageListenerContainer() {
 		ConcurrentMessageListenerContainer<String, String> container = new ConcurrentMessageListenerContainer<>(consumerFactory(), containerProperties());
 		container.setConcurrency(concurrency);
