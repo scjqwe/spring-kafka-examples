@@ -2,8 +2,7 @@ package com.suncj.demo.consumer;
 
 /**
  * 消费者配置项 <br>
- * 版权：Copyright (c) 2015-2016<br>
- * 作者：孙常军<br>
+ * 作者：suncj<br>
  * 版本：1.0<br>
  * 创建日期：2018年3月21日<br>
  */

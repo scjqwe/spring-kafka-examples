@@ -16,9 +16,7 @@ import org.springframework.kafka.listener.config.ContainerProperties;
 
 /**
  * kafka消费端配置 <br>
- * 版权：Copyright (c) 2015-2016<br>
- * 公司：北京活力天汇<br>
- * 作者：孙常军<br>
+ * 作者：suncj<br>
  * 版本：1.0<br>
  * 创建日期：2018年3月21日<br>
  */
